@@ -1,0 +1,132 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  z-index: 999;
+}
+.navbar__content {
+  max-width: 1850px;
+  padding: 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar__content__nav {
+  display: flex;
+  align-items: center;
+}
+.navbar__content__nav__img {
+  width: 140px;
+}
+.navbar__content__nav__items {
+  margin-left: 6rem;
+  display: flex;
+  align-items: center;
+}
+.navbar__content__nav__item {
+  font-size: 14px;
+  margin: 0 15px;
+  font-weight: bold;
+}
+.navbar__content__nav__item:hover a {
+  color: #222;
+}
+.navbarMenuIcon {
+  color: #222;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 15px 18px;
+  border-radius: 50%;
+  z-index: 999;
+  cursor: pointer;
+}
+/* MENU LADO DIREITO */
+.navbar__menu {
+  background-color: white;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 30%;
+  min-width: 320px;
+  max-width: 500px;
+
+  right: -32rem;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 1s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 4.5rem;
+  height: 100vh;
+}
+.navbarOpen {
+  opacity: 1;
+  right: 0;
+  visibility: visible;
+}
+.navbar__menu__top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.navMenuGit,
+.navMenuClose {
+  font-size: 2rem;
+  color: #222;
+  cursor: pointer;
+}
+.navbar__menu__items__item {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.navbar__menu__items__item a:hover {
+  color: #222;
+}
+.navbar__menu__input__title {
+  font-weight: bold;
+  color: #222;
+}
+.navbar__menu__input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.navbar__menu__input__field {
+  margin: 10px 0;
+  padding: 10px 0;
+  padding-right: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #222;
+  transition: all 0.2s;
+}
+.navbar__menu__input__field:focus {
+  border-color: #f58634;
+}
+.navbar__menu__input__field:focus ~ .navMenuSearch {
+  color: #f58634;
+}
+.navMenuSearch {
+  position: absolute;
+  transition: all 0.2s;
+  right: 0;
+  top: 45px;
+  cursor: pointer;
+}
+.navbar__menu__input__copy {
+  text-align: center;
+  color: #8d8d8d;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .navbar__content__nav__items {
+    display: none;
+  }
+}
