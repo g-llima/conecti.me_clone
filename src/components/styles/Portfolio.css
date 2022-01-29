@@ -1,0 +1,113 @@
+.portfolio {
+  width: 100%;
+  background-color: white;
+}
+.portfolio__content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.portfolio__content__texts {
+  display: inline-block;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.portfolio__content__texts__title {
+  font-size: calc(1.5rem + 1vw);
+  color: #222;
+}
+.portfolio__content__texts__subTxt {
+  color: #f58634;
+}
+.portfolio__content__grid {
+  width: 100%;
+  justify-content: center;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 1rem;
+}
+.portfolio__content__grid__item {
+  border: 1px solid black;
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: inline-block;
+}
+.img1 {
+  background: url("https://i.ibb.co/kDt6z0p/portfolio-moodlebrasil.jpg");
+}
+.img2 {
+  background: url("https://i.ibb.co/6m5NmHg/portfolio-fiep.jpg");
+}
+.img3 {
+  background: url("https://i.ibb.co/bQXsRyT/portfolio-uncc.jpg");
+}
+.img4 {
+  background: url("https://i.ibb.co/d4DnTws/portfolio-wikiasus.jpg");
+}
+.img5 {
+  background: url("https://i.ibb.co/wCGvNNh/portfolio-dabpumps.jpg");
+}
+.img6 {
+  background: url("https://conecti.me/wp-content/uploads/2019/06/portfolio-cursosabertos.jpg");
+}
+.portfolio__content__grid__item__img {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s;
+}
+.portfolio__content__grid__item__texts {
+  background-color: white;
+  position: absolute;
+  bottom: -5rem;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  cursor: pointer;
+
+  visibility: hidden;
+  opacity: 0;
+  padding: 4rem;
+
+  transition: all 0.5s;
+}
+.portfolio__content__grid__item__texts__title {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #222;
+}
+.portfolio__content__grid__item__texts__desc {
+  cursor: pointer;
+}
+.portfolio__content__grid__item:hover .portfolio__content__grid__item__texts {
+  visibility: visible;
+  bottom: 0;
+  opacity: 1;
+}
+.portfolio__content__grid__item:hover .portfolio__content__grid__item__img {
+  background-position-y: -160px;
+}
+@media only screen and (max-width: 1024px) {
+  .portfolio__content__grid__item {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .portfolio__content__grid__item {
+    width: 100%;
+    height: 600px;
+  }
+  .portfolio__content__grid__item__img {
+    height: 100%;
+  }
+  .portfolio__content__grid {
+    display: flex;
+    flex-direction: column;
+  }
+}

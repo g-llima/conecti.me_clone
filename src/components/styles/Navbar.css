@@ -33,13 +33,28 @@
   color: #222;
 }
 .navbarMenuIcon {
-  color: #222;
   background-color: white;
-  font-size: 1.5rem;
-  padding: 15px 18px;
+  position: relative;
   border-radius: 50%;
+  padding: 25px 25px;
   z-index: 999;
   cursor: pointer;
+}
+.lineNav {
+  position: absolute;
+  width: 40%;
+  left: 50%;
+  top: 43%;
+  transform: translate(-50%, -43%);
+
+  height: 3px;
+  display: inline-block;
+  background-color: #222;
+}
+.lineNav:last-child {
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%, -57%);
 }
 /* MENU LADO DIREITO */
 .navbar__menu {

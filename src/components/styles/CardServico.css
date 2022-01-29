@@ -1,0 +1,58 @@
+.cardServico {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-align: left;
+  border: 3px solid transparent;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.cardServicoIconComp {
+  font-size: 4rem;
+}
+.cardServico__title {
+  color: #222;
+}
+.cardServico__desc {
+  color: #8d8d8d;
+}
+.cardServico:hover {
+  box-shadow: 2px 3px 10px #dbdbdb;
+}
+.cardServico__circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 10px;
+  left: 20px;
+  transition: all 0.6s;
+}
+.cardServico:hover .card__circle {
+  top: 30px;
+  left: 40px;
+}
+.cardServico::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 300px;
+  height: 5px;
+  transition: all 0.3s;
+}
+.cardServico:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  width: 300px;
+  height: 5px;
+  background: #fd8558;
+  border-radius: 0 0 2px 2px;
+}

@@ -35,10 +35,10 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <i
-          className="fas fa-bars navbarMenuIcon"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        ></i>
+        <div className="navbarMenuIcon" onClick={() => setIsMenuOpen(true)}>
+          <span className="lineNav"></span>
+          <span className="lineNav"></span>
+        </div>
       </div>
 
       <div className={`navbar__menu ${isMenuOpen ? "navbarOpen" : null}`}>
