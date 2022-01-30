@@ -4,12 +4,21 @@ import "./styles/Navbar.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [windowScroll, setWindowScroll] = useState(0);
+
+  window.addEventListener("scroll", () => {
+    setWindowScroll(window.scrollY);
+  });
 
   window.addEventListener("resize", () => setIsMenuOpen(false));
 
   return (
-    <header className="navbar">
-      <div className="navbar__content">
+    <header className={`navbar ${windowScroll >= 200 ? "scrolledNav" : null}`}>
+      <div
+        className={`navbar__content ${
+          windowScroll >= 200 ? "scrolledNavContent" : null
+        }`}
+      >
         <div className="navbar__content__nav">
           <img
             src="https://i.ibb.co/nDSvphj/logo-conectime.png"
@@ -18,18 +27,18 @@ function Navbar() {
             onClick={() => setIsMenuOpen(false)}
           />
           <ul className="navbar__content__nav__items">
-            <li className="navbar__content__nav__item">
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+            <li className="navbar__content__nav__item navActive">
+              <Link to="/#" onClick={() => setIsMenuOpen(false)}>
                 Início
               </Link>
             </li>
             <li className="navbar__content__nav__item">
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>
                 Trabalhos passados
               </Link>
             </li>
             <li className="navbar__content__nav__item">
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/blog" onClick={() => setIsMenuOpen(false)}>
                 Blog
               </Link>
             </li>
@@ -55,18 +64,18 @@ function Navbar() {
           ></i>
         </div>
         <ul className="navbar__menu__items">
-          <li className="navbar__menu__items__item">
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+          <li className="navbar__menu__items__item navActive">
+            <Link to="/#" onClick={() => setIsMenuOpen(false)}>
               Início
             </Link>
           </li>
           <li className="navbar__menu__items__item">
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>
               Trabalhos passados
             </Link>
           </li>
           <li className="navbar__menu__items__item">
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/blog" onClick={() => setIsMenuOpen(false)}>
               Blog
             </Link>
           </li>

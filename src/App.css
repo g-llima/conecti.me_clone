@@ -7,6 +7,9 @@
   text-decoration: none;
   list-style: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 ::-moz-selection {
   color: white;
   background: black;
