@@ -111,3 +111,8 @@
     flex-direction: column;
   }
 }
+@media only screen and (max-width: 425px) {
+  .portfolio__content__grid__item {
+    height: 300px;
+  }
+}

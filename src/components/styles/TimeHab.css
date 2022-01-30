@@ -1,0 +1,71 @@
+.timeHab {
+  margin-top: 5rem;
+  width: 100%;
+  background-color: white;
+}
+.timeHab__content {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.timeHab__content__texts {
+  margin: 0 2rem;
+  max-width: 400px;
+}
+.timeHab__content__texts__subTxt {
+  color: #f58634;
+}
+.timeHab__content__texts__title {
+  font-size: 2.5rem;
+  color: #222;
+  margin: 2rem 0;
+}
+.timeHab__content__texts__desc,
+.timeHab__content__habs__item__desc {
+  color: #8d8d8d;
+  font-size: 15px;
+}
+.timeHab__content__habs__item__desc {
+  max-width: 300px;
+}
+.timeHab__content__habs {
+  display: flex;
+}
+.timeHab__content__habs__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
+}
+.timeHab__content__habs__item__title {
+  margin: 3rem 0 1rem 0;
+  color: #222;
+  text-align: left;
+  width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .timeHab__content__texts__title {
+    font-size: 2rem;
+  }
+  .timeHab__content__habs__item {
+    margin: 0 1rem;
+  }
+  .timeHab__content__habs__item__desc {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .timeHab__content {
+    flex-direction: column;
+    margin: 0 3rem;
+  }
+  .timeHab__content__habs__item {
+    margin: 3rem 1rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .timeHab__content__habs {
+    flex-direction: column;
+  }
+}
