@@ -1,4 +1,5 @@
 import "./App.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Sobre from "./components/Sobre";
@@ -8,6 +9,7 @@ import TimeHab from "./components/TimeHab";
 import Lema from "./components/Lema";
 import Clientes from "./components/Clientes";
 import Contato from "./components/Contato";
+import Mensagem from "./components/Mensagem";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
       <Lema />
       <Clientes />
       <Contato />
+      <Mensagem />
     </div>
   );
 }

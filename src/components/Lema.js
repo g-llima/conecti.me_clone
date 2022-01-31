@@ -64,6 +64,7 @@ function Lema() {
           </p>
         </div>
       </div>
+      <div className="lema__circle"></div>
     </div>
   );
 }

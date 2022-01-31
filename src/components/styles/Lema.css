@@ -1,6 +1,7 @@
 .lema {
   width: 100%;
   background-color: white;
+  position: relative;
 }
 .lema__content {
   display: flex;
@@ -80,6 +81,36 @@
   width: 10%;
   left: 15%;
   top: 83%;
+}
+.lema__circle {
+  width: 21%;
+  height: 150%;
+  border-radius: 100% 0% 0% 100% / 49% 30% 70% 51%;
+  background: rgb(157, 151, 255);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(157, 151, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(157, 151, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(157, 151, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9d97ff",endColorstr="#ffffff",GradientType=1);
+  top: -20rem;
+  right: 0;
+  position: absolute;
+}
+@media only screen and (max-width: 1024px) {
+  .lema__circle {
+    display: none;
+  }
 }
 @media only screen and (max-width: 768px) {
   .lema__content__texts__title {
