@@ -6,6 +6,7 @@ import Servicos from "./components/Servicos";
 import Portfolio from "./components/Portfolio";
 import TimeHab from "./components/TimeHab";
 import Lema from "./components/Lema";
+import Clientes from "./components/Clientes";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Portfolio />
       <TimeHab />
       <Lema />
+      <Clientes />
     </div>
   );
 }
