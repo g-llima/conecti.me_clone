@@ -15,7 +15,8 @@
   z-index: 99;
 }
 .pagestart__texts__title {
-  font-size: calc(60px + 1vw);
+  font-size: calc(60px + 2vw);
+  line-height: 120px;
   width: 500px;
   font-weight: bolder;
   color: #222;
