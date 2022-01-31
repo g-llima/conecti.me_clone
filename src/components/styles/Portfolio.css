@@ -72,7 +72,7 @@
 
   visibility: hidden;
   opacity: 0;
-  padding: 4rem;
+  padding: 2rem;
 
   transition: all 0.5s;
 }
@@ -94,7 +94,7 @@
 }
 @media only screen and (max-width: 1024px) {
   .portfolio__content__grid__item {
-    width: 250px;
+    width: 100%;
     height: 250px;
   }
 }
@@ -110,9 +110,18 @@
     display: flex;
     flex-direction: column;
   }
+  .portfolio__content__grid__item__texts {
+    bottom: -5rem;
+    padding: 2rem;
+  }
 }
 @media only screen and (max-width: 425px) {
   .portfolio__content__grid__item {
     height: 300px;
+  }
+  .portfolio__content__grid__item__texts {
+    bottom: -5rem;
+    padding: 1rem;
+    font-size: 14px;
   }
 }

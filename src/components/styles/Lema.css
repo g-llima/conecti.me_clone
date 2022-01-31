@@ -1,0 +1,52 @@
+.lema {
+  width: 100%;
+  background-color: white;
+}
+.lema__content {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+}
+.lema__content__texts {
+  margin: 0 5rem;
+  max-width: 400px;
+}
+.lema__content__texts__subTxt {
+  color: #f58634;
+}
+.lema__content__texts__title {
+  color: #222;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+.lema__content__texts__desc {
+  font-size: 15px;
+  color: #8d8d8d;
+}
+.lema__content__imgs__bgImg {
+  width: 100%;
+  max-width: 600px;
+  min-width: 300px;
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .lema__content__texts__title {
+    font-size: 2rem;
+  }
+  .lema__content__imgs__bgImg {
+    max-width: 400px;
+    margin-bottom: 2rem;
+  }
+  .lema__content {
+    flex-direction: column;
+  }
+  .lema__content__imgs__objects__container {
+    position: absolute;
+    height: 500px;
+    width: 0%;
+  }
+}
