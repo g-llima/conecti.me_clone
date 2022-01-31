@@ -1,6 +1,7 @@
 .contato {
   width: 100%;
   padding: 5rem 0;
+  position: relative;
   background-color: white;
 }
 .contato__content {
@@ -38,6 +39,35 @@
   font-weight: bold;
   margin-bottom: 20px;
   color: #222;
+}
+.contato__forma {
+  width: 21%;
+  height: 150%;
+  border-radius: 100% 0% 0% 100% / 49% 30% 70% 51%;
+  background: rgba(129, 221, 151, 0.2);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(129, 221, 151, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(129, 221, 151, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(129, 221, 151, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  top: -10rem;
+  right: 0;
+  position: absolute;
+}
+@media only screen and (max-width: 1024px) {
+  .contato__forma {
+    display: none;
+  }
 }
 @media only screen and (max-width: 768px) {
   .contato__content__texts {

@@ -55,6 +55,7 @@ function Contato() {
           </ul>
         </div>
       </div>
+      <div className="contato__forma"></div>
     </div>
   );
 }

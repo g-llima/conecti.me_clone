@@ -28,7 +28,7 @@
 .clientes__content__clientes__img {
   width: 200px;
   margin: 1rem 2rem;
-  opacity: 0.6;
+  opacity: 0.5;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }

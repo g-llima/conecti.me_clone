@@ -32,16 +32,29 @@
   top: 0;
   left: -10rem;
   height: 100%;
-  background-color: rgba(255, 103, 103, 0.1);
-  border-radius: 0 500px 300px 0;
+  border-radius: 0% 100% 100% 0% / 30% 49% 51% 70%;
+  background: rgba(253, 191, 191, 0.2);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(253, 191, 191, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(253, 191, 191, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(253, 191, 191, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
   position: absolute;
   overflow: hidden;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
   .servicos__forma {
-    width: 35%;
-    top: 0;
-    left: -15rem;
-    height: 50%;
+    display: none;
   }
 }
