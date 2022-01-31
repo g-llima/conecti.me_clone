@@ -7,6 +7,7 @@ import Portfolio from "./components/Portfolio";
 import TimeHab from "./components/TimeHab";
 import Lema from "./components/Lema";
 import Clientes from "./components/Clientes";
+import Contato from "./components/Contato";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <TimeHab />
       <Lema />
       <Clientes />
+      <Contato />
     </div>
   );
 }
