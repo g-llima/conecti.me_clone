@@ -10,6 +10,7 @@ import Lema from "./components/Lema";
 import Clientes from "./components/Clientes";
 import Contato from "./components/Contato";
 import Mensagem from "./components/Mensagem";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Clientes />
       <Contato />
       <Mensagem />
+      <Footer />
     </div>
   );
 }
