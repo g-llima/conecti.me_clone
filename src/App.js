@@ -1,6 +1,6 @@
 import "./App.css";
 import "mapbox-gl/dist/mapbox-gl.css";
-import Home from "./components/Home";
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Sobre from "./components/Sobre";
 import Servicos from "./components/Servicos";
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Home />
+      <Hero />
       <Sobre />
       <Servicos />
       <Portfolio />
