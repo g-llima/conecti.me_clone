@@ -2,14 +2,26 @@ import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import "./styles/Navbar.css";
 
+const headerItemsList = [
+  {
+    text: "Início",
+    link: "#",
+  },
+  {
+    text: "Trabalhos passados",
+    link: "#portfolio",
+  },
+  {
+    text: "Blog",
+    link: "/",
+  },
+];
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [windowScroll, setWindowScroll] = useState(0);
 
-  window.addEventListener("scroll", () => {
-    setWindowScroll(window.scrollY);
-  });
-
+  window.addEventListener("scroll", () => setWindowScroll(window.scrollY));
   window.addEventListener("resize", () => setIsMenuOpen(false));
 
   return (
@@ -20,36 +32,34 @@ function Navbar() {
         }`}
       >
         <div className="navbar__content__nav">
+          {/* LOGO */}
           <img
             src="https://i.ibb.co/nDSvphj/logo-conectime.png"
             alt="conecti.me"
             className="navbar__content__nav__img"
             onClick={() => setIsMenuOpen(false)}
           />
+
+          {/* HEADER ITEMS */}
           <ul className="navbar__content__nav__items">
-            <li className="navbar__content__nav__item navActive">
-              <Link to="#" onClick={() => setIsMenuOpen(false)}>
-                Início
-              </Link>
-            </li>
-            <li className="navbar__content__nav__item">
-              <Link to="#portfolio" onClick={() => setIsMenuOpen(false)}>
-                Trabalhos passados
-              </Link>
-            </li>
-            <li className="navbar__content__nav__item">
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>
-                Blog
-              </Link>
-            </li>
+            {headerItemsList.map((item, index) => (
+              <li className="navbar__content__nav__item" key={index}>
+                <Link to={item.link} onClick={() => setIsMenuOpen(false)}>
+                  {item.text}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
+
+        {/* HAMBURGER BUTTON */}
         <div className="navbarMenuIcon" onClick={() => setIsMenuOpen(true)}>
           <span className="lineNav"></span>
           <span className="lineNav"></span>
         </div>
       </div>
 
+      {/* RIGHT SIDEBAR MENU */}
       <div className={`navbar__menu ${isMenuOpen ? "navbarOpen" : null}`}>
         <div className="navbar__menu__top">
           <a href="https://github.com/g-llima" target="_blank">
@@ -63,23 +73,19 @@ function Navbar() {
             onClick={() => setIsMenuOpen(false)}
           ></i>
         </div>
+
+        {/* SIDEBAR MENU ITEMS */}
         <ul className="navbar__menu__items">
-          <li className="navbar__menu__items__item navActive">
-            <Link to="/#" onClick={() => setIsMenuOpen(false)}>
-              Início
-            </Link>
-          </li>
-          <li className="navbar__menu__items__item">
-            <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>
-              Trabalhos passados
-            </Link>
-          </li>
-          <li className="navbar__menu__items__item">
-            <Link to="/blog" onClick={() => setIsMenuOpen(false)}>
-              Blog
-            </Link>
-          </li>
+          {headerItemsList.map((item, index) => (
+            <li className="navbar__menu__items__item" key={index}>
+              <Link to={item.link} onClick={() => setIsMenuOpen(false)}>
+                {item.text}
+              </Link>
+            </li>
+          ))}
         </ul>
+
+        {/* SIDEBAR MENU INPUT */}
         <div className="navbar__menu__input">
           <label htmlFor="search" className="navbar__menu__input__title">
             Search
@@ -94,6 +100,8 @@ function Navbar() {
             className="fas fa-search navMenuSearch"
             onClick={() => setIsMenuOpen(false)}
           ></i>
+
+          {/* SIDEBAR MENU COPYRIGHT */}
           <p className="navbar__menu__input__copy">
             Conecti.me &copy; 2022. Todos os direitos reservados.
           </p>
