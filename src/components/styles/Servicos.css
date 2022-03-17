@@ -4,13 +4,6 @@
   background-color: white;
   position: relative;
 }
-.cards {
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
 .servicos__content {
   max-width: 1200px;
   display: flex;
@@ -26,6 +19,13 @@
 .servicos__content__texts__txt {
   font-size: calc(1.5rem + 1vw);
   color: #222;
+}
+.servicos__content__cards {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .servicos__forma {
   width: 35%;

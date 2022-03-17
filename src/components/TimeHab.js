@@ -17,7 +17,7 @@ const habs = [
 
 function TimeHab() {
   return (
-    <div className="timeHab">
+    <section className="timeHab">
       <div className="timeHab__content">
         <div className="timeHab__content__texts">
           <h4 className="timeHab__content__texts__subTxt">
@@ -32,6 +32,7 @@ function TimeHab() {
           </p>
         </div>
         <div className="timeHab__content__habs">
+          {/* ABILITIES ITEMS */}
           {habs.map((item, key) => (
             <div className="timeHab__content__habs__item" key={key}>
               <CircularSlider value={item.valueSlider} />
@@ -43,7 +44,7 @@ function TimeHab() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

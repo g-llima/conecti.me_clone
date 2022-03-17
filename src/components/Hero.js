@@ -43,6 +43,7 @@ function Hero() {
         <div className="hero__texts">
           <h1 className="hero__texts__title">
             EAD com
+            {/* TYPEWRITTER EFFECT */}
             <TypeWritter
               options={{
                 strings: ["excelência", "segurança", "qualidade", "confiança"],

@@ -52,11 +52,14 @@ function Lema() {
       <div className="lema__content">
         {/* CIRCLE WITH THE ICONS */}
         <div className="lema__content__imgs">
+          {/* BIG CIRCLE IMG */}
           <img
             src="https://i.ibb.co/DrmfxdS/round.png"
             alt="#"
             className="lema__content__imgs__bgImg"
           />
+
+          {/* ICONS IMGS */}
           <div className="lema__content__imgs__objects">
             {lemaIcons.map((item, index) => (
               <img
@@ -70,7 +73,6 @@ function Lema() {
           </div>
         </div>
 
-        {/* SECTION TEXTS */}
         <div className="lema__content__texts">
           <h4 className="lema__content__texts__subTxt">NOSSO LEMA</h4>
           <h2 className="lema__content__texts__title">

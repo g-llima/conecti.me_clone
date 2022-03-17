@@ -31,13 +31,14 @@ const clientes = [
 
 function Clientes() {
   return (
-    <div className="clientes">
+    <section className="clientes">
       <div className="clientes__content">
         <h4 className="clientes__content__subTxt">
           Clientes que creditam confiança
         </h4>
         <h2 className="clientes__content__title">Nossos clientes</h2>
         <div className="clientes__content__clientes">
+          {/* CLIENTS ITEMS */}
           {clientes.map((item, key) => (
             <a href={item.linkUrl} key={key} target="_blank">
               <img
@@ -49,7 +50,7 @@ function Clientes() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

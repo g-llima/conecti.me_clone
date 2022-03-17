@@ -29,7 +29,7 @@ circle {
   stroke-width: 8px;
   stroke-dasharray: 472;
 }
-.circularSlider__svg {
+.circularSlider__circle__svg {
   position: absolute;
   top: -5px;
   left: -5px;

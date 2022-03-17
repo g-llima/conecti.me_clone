@@ -43,7 +43,7 @@ function Portfolio() {
           {port_items.map((item, index) => (
             <a href={item.link} target="_blank" key={index}>
               <div className="portfolio__content__grid__item">
-                {/* PORFOLIO ITEM IMG */}
+                {/* PORTFOLIO ITEMS IMGS (CSS BACKGROUND - PREVENT BUG) */}
                 <div
                   className={`portfolio__content__grid__item__img img${
                     index + 1

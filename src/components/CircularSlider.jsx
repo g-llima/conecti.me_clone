@@ -5,11 +5,9 @@ function CircularSlider({ value = 50 }) {
   const [innerValue, setInnerValue] = useState(1);
   const [loadAnimation, setLoadAnimation] = useState(0);
 
-  window.addEventListener("scroll", () => {
-    setLoadAnimation(window.scrollY);
-  });
+  window.addEventListener("scroll", () => setLoadAnimation(window.scrollY));
 
-
+  // FILL CIRCULAR SLIDER ANIMATION
   useEffect(() => {
     if (loadAnimation >= 2300) {
       setTimeout(() => {
@@ -18,7 +16,6 @@ function CircularSlider({ value = 50 }) {
         }
       }, 20);
     }
-
   }, [innerValue, loadAnimation]);
 
   return (
@@ -35,7 +32,7 @@ function CircularSlider({ value = 50 }) {
           version="1.1"
           width="160px"
           height="160px"
-          className="circularSlider__svg"
+          className="circularSlider__circle__svg"
         >
           <circle
             cx="80"

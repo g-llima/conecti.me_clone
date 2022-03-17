@@ -32,7 +32,9 @@ const cards = [
 function Servicos() {
   return (
     <section className="servicos">
+      {/* LEFT SIDE RED FORM */}
       <span className="servicos__forma"></span>
+
       <div className="servicos__content">
         <div className="servicos__content__texts">
           <h4 className="servicos__content__texts__subTxt">
@@ -42,7 +44,8 @@ function Servicos() {
             Foque no seu negócio e deixe o resto conosco
           </h2>
         </div>
-        <div className="cards">
+        <div className="servicos__content__cards">
+          {/* CARDS ITEMS */}
           {cards.map((item, key) => (
             <CardServico
               icon={item.icon}

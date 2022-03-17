@@ -101,7 +101,6 @@ function Navbar() {
             onClick={() => setIsMenuOpen(false)}
           ></i>
 
-          {/* SIDEBAR MENU COPYRIGHT */}
           <p className="navbar__menu__input__copy">
             Conecti.me &copy; 2022. Todos os direitos reservados.
           </p>

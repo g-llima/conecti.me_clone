@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./styles/Mensagem.css";
 
-// FORM LEFT SIDE INPUTS
-const msgForm = [
+const formLeftInputs = [
   {
     name: "nome",
     type: "text",
@@ -54,7 +53,7 @@ function Mensagem() {
         >
           {/* FORM LEFT SIDE */}
           <div className="mensagem__content__form__left">
-            {msgForm.map((item, index) => (
+            {formLeftInputs.map((item, index) => (
               <input
                 key={index}
                 type={item.type}

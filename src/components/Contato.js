@@ -5,6 +5,7 @@ import ReactMapGL from "react-map-gl";
 const mapboxAPI = process.env.REACT_APP_MAPAPI;
 
 function Contato() {
+  // MAPGL DATA
   const [viewport, setViewport] = useState({
     width: "100%",
     height: 500,
@@ -13,6 +14,7 @@ function Contato() {
     zoom: 15,
   });
 
+  // INFO LIST
   const info = [
     {
       title: "E-mail",
@@ -29,8 +31,9 @@ function Contato() {
   ];
 
   return (
-    <div className="contato">
+    <section className="contato">
       <div className="contato__content">
+        {/* MAP COMPONENT */}
         <ReactMapGL
           {...viewport}
           onViewportChange={(nextViewport) => setViewport(nextViewport)}
@@ -38,10 +41,12 @@ function Contato() {
           mapStyle="mapbox://styles/mapbox/streets-v11"
           className="contato__content__map"
         />
+
         <div className="contato__content__texts">
           <h4 className="contato__content__texts__subTxt">ENTRE EM CONTATO</h4>
           <h2 className="contato__content__texts__title">Brasil</h2>
           <ul className="contato__content__texts__data">
+            {/* INFO ITEMS */}
             {info.map((item, key) => (
               <li className="contato__content__texts__data__item" key={key}>
                 <p className="contato__content__texts__data__item__title">
@@ -55,8 +60,10 @@ function Contato() {
           </ul>
         </div>
       </div>
+
+      {/* RIGHT GREEN FORM */}
       <div className="contato__forma"></div>
-    </div>
+    </section>
   );
 }
 
