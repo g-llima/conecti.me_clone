@@ -1,8 +1,17 @@
 .mensagem {
   width: 100%;
   padding-bottom: 5rem;
+  position: relative;
   z-index: 999;
   background-color: white;
+}
+.mensagem__dots {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  z-index: -1;
+  border-radius: 50%;
 }
 .mensagem__content {
   max-width: 1200px;
@@ -20,24 +29,25 @@
   display: flex;
   margin-top: 3rem;
 }
-.mensagemForm3 {
+.mensagem__content__form__left {
   display: flex;
   width: 40%;
   flex-direction: column;
 }
-.mensagem__content__form__input {
+.mensagem__content__form__left__input {
   padding: 10px 0 10px 30px;
   font-size: 15px;
   margin: 20px 0;
   border: none;
+  background: transparent;
   border-bottom: 2px solid #dbdbdb;
   outline: none;
   transition: all 0.3s;
 }
-.mensagem__content__form__input:focus {
+.mensagem__content__form__left__input:focus {
   border-bottom: 2px solid #fd8558;
 }
-.mensagemForm2 {
+.mensagem__content__form__right {
   margin-left: 5rem;
   width: 40%;
   display: flex;
@@ -45,7 +55,7 @@
   flex-direction: column;
   align-items: flex-end;
 }
-.mensagem__content__form__input__textArea {
+.mensagem__content__form__right__input__textArea {
   width: 100%;
   border: none;
   outline: none;
@@ -56,10 +66,10 @@
   z-index: 2;
   border-bottom: 2px solid #dbdbdb;
 }
-.mensagem__content__form__input__textArea:focus {
+.mensagem__content__form__right__input__textArea:focus {
   border-bottom: 2px solid #fd8558;
 }
-.mensagem__content__form__submitBtn {
+.mensagem__content__form__right__submitBtn {
   margin-top: 3.5rem;
   font-size: 16px;
   font-weight: bold;
@@ -70,13 +80,13 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-.mensagem__content__form__submitBtn:hover,
-.mensagem__content__form__submitBtn:focus {
+.mensagem__content__form__right__submitBtn:hover,
+.mensagem__content__form__right__submitBtn:focus {
   box-shadow: inset 13rem 0 0 0 white;
   color: #f58634;
 }
 .submited {
-  background-color: #3ec59d;
+  background: #3ec59d;
   border: 1px solid #3ec59d;
 }
 .submited:hover,
@@ -84,7 +94,7 @@
   box-shadow: none;
   color: white;
 }
-.mensagemForm2__txt {
+.mensagem__content__form__right__txt {
   padding-top: 3rem;
   color: #8d8d8d;
 }
@@ -95,46 +105,6 @@
   right: 5rem;
   z-index: 1;
   opacity: 0.2;
-}
-.dotF1 {
-  background-color: #f69977;
-  left: 11%;
-  top: 23%;
-}
-.dotF2 {
-  background-color: #9d97ff;
-  left: 3.5%;
-  top: 50%;
-}
-.dotF3 {
-  background-color: #9ed27d;
-  left: 60%;
-  top: 3%;
-}
-.dotF4 {
-  background-color: #faca6a;
-  left: 12%;
-  top: 85%;
-}
-.dotF5 {
-  background-color: #f69977;
-  left: 78%;
-  top: 30%;
-}
-.dotF6 {
-  background-color: #9d97ff;
-  left: 85%;
-  top: 80%;
-}
-.dotF7 {
-  background-color: #faca6a;
-  left: 85%;
-  top: 1%;
-}
-.dotF8 {
-  background-color: #9ed27d;
-  left: 93%;
-  top: 35%;
 }
 @media only screen and (max-width: 768px) {
   .mensagem__content__form {
