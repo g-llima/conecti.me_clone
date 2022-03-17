@@ -4,25 +4,25 @@ import CardServico from "./CardServico";
 
 const cards = [
   {
-    icon: "fal fa-pencil-ruler",
+    icon: "fa-solid fa-pen-ruler",
     title: "Customização",
     desc: "Customização dos ambientes que atendam às suas necessidades.",
     colorRGB: "253, 133, 88",
   },
   {
-    icon: "fal fa-tools",
+    icon: "fa-solid fa-screwdriver-wrench",
     title: "Desenvolvimento",
     desc: "Desenvolvimento de plugins e integrações entre sistemas.",
     colorRGB: "157, 151, 255",
   },
   {
-    icon: "fal fa-database",
+    icon: "fa-solid fa-database",
     title: "Hospedagem",
     desc: "Hospedagem em cloud escalável.",
     colorRGB: "112, 180, 70",
   },
   {
-    icon: "fal fa-headset",
+    icon: "fa-solid fa-headset",
     title: "Suporte",
     desc: "Suporte especializado com profissionais experientes.",
     colorRGB: "250, 202, 106",

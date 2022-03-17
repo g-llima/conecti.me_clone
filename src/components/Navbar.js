@@ -28,17 +28,17 @@ function Navbar() {
           />
           <ul className="navbar__content__nav__items">
             <li className="navbar__content__nav__item navActive">
-              <Link to="/#" onClick={() => setIsMenuOpen(false)}>
+              <Link to="#" onClick={() => setIsMenuOpen(false)}>
                 Início
               </Link>
             </li>
             <li className="navbar__content__nav__item">
-              <Link to="/portfolio" onClick={() => setIsMenuOpen(false)}>
+              <Link to="#portfolio" onClick={() => setIsMenuOpen(false)}>
                 Trabalhos passados
               </Link>
             </li>
             <li className="navbar__content__nav__item">
-              <Link to="/blog" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>
                 Blog
               </Link>
             </li>
@@ -52,7 +52,7 @@ function Navbar() {
 
       <div className={`navbar__menu ${isMenuOpen ? "navbarOpen" : null}`}>
         <div className="navbar__menu__top">
-          <a href="https://github.com/Osumii" target="_blank">
+          <a href="https://github.com/g-llima" target="_blank">
             <i
               className="fab fa-github navMenuGit"
               onClick={() => setIsMenuOpen(false)}
