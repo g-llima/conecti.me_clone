@@ -1,6 +1,33 @@
 import React from "react";
 import "./styles/Portfolio.css";
 
+const port_items = [
+  {
+    name: "Moodle Brasil",
+    link: "https://conecti.me/portfolio-item/moodle-brasil/",
+  },
+  {
+    name: "App Mobile Fiep",
+    link: "https://conecti.me/portfolio-item/app-mobile-fiep/",
+  },
+  {
+    name: "UN CC:e-Learn",
+    link: "https://conecti.me/portfolio-item/un-cce-learng/",
+  },
+  {
+    name: "Wiki Asus IT",
+    link: "https://conecti.me/portfolio-item/wiki-asus-it/",
+  },
+  {
+    name: "Dab Pumps Learning",
+    link: "https://conecti.me/portfolio-item/dab-pumps-learning/",
+  },
+  {
+    name: "Cursos Abertos",
+    link: "https://conecti.me/portfolio-item/cursos-abertos/",
+  },
+];
+
 function Portfolio() {
   return (
     <section className="portfolio" id="portfolio">
@@ -12,107 +39,25 @@ function Portfolio() {
           </h2>
         </div>
         <div className="portfolio__content__grid">
-          <a
-            href="https://conecti.me/portfolio-item/moodle-brasil/"
-            target="_blank"
-          >
-            <div className="portfolio__content__grid__item">
-              <div className="portfolio__content__grid__item__img img1"></div>
-              <div className="portfolio__content__grid__item__texts">
-                <h4 className="portfolio__content__grid__item__texts__title">
-                  Moodle Brasil
-                </h4>
-                <p className="portfolio__content__grid__item__texts__desc">
-                  Clique e saiba mais
-                </p>
+          {port_items.map((item, index) => (
+            <a href={item.link} target="_blank" key={index}>
+              <div className="portfolio__content__grid__item">
+                <div
+                  className={`portfolio__content__grid__item__img img${
+                    index + 1
+                  }`}
+                ></div>
+                <div className="portfolio__content__grid__item__texts">
+                  <h4 className="portfolio__content__grid__item__texts__title">
+                    {item.name}
+                  </h4>
+                  <p className="portfolio__content__grid__item__texts__desc">
+                    Clique e saiba mais
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
-
-          <a
-            href="https://conecti.me/portfolio-item/app-mobile-fiep/"
-            target="_blank"
-          >
-            <div className="portfolio__content__grid__item">
-              <div className="portfolio__content__grid__item__img img2"></div>
-              <div className="portfolio__content__grid__item__texts">
-                <h4 className="portfolio__content__grid__item__texts__title">
-                  App Mobile Fiep
-                </h4>
-                <p className="portfolio__content__grid__item__texts__desc">
-                  Clique e saiba mais
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://conecti.me/portfolio-item/un-cce-learng/"
-            target="_blank"
-          >
-            <div className="portfolio__content__grid__item">
-              <div className="portfolio__content__grid__item__img img3"></div>
-              <div className="portfolio__content__grid__item__texts">
-                <h4 className="portfolio__content__grid__item__texts__title">
-                  UN CC:e-Learn
-                </h4>
-                <p className="portfolio__content__grid__item__texts__desc">
-                  Clique e saiba mais
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://conecti.me/portfolio-item/wiki-asus-it/"
-            target="_blank"
-          >
-            <div className="portfolio__content__grid__item">
-              <div className="portfolio__content__grid__item__img img4"></div>
-              <div className="portfolio__content__grid__item__texts">
-                <h4 className="portfolio__content__grid__item__texts__title">
-                  Wiki Asus IT
-                </h4>
-                <p className="portfolio__content__grid__item__texts__desc">
-                  Clique e saiba mais
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://conecti.me/portfolio-item/dab-pumps-learning/"
-            target="_blank"
-          >
-            <div className="portfolio__content__grid__item">
-              <div className="portfolio__content__grid__item__img img5"></div>
-              <div className="portfolio__content__grid__item__texts">
-                <h4 className="portfolio__content__grid__item__texts__title">
-                  Dab Pumps Learning
-                </h4>
-                <p className="portfolio__content__grid__item__texts__desc">
-                  Clique e saiba mais
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://conecti.me/portfolio-item/cursos-abertos/"
-            target="_blank"
-          >
-            <div className="portfolio__content__grid__item">
-              <div className="portfolio__content__grid__item__img img6"></div>
-              <div className="portfolio__content__grid__item__texts">
-                <h4 className="portfolio__content__grid__item__texts__title">
-                  Cursos Abertos
-                </h4>
-                <p className="portfolio__content__grid__item__texts__desc">
-                  Clique e saiba mais
-                </p>
-              </div>
-            </div>
-          </a>
+            </a>
+          ))}
         </div>
       </div>
     </section>
