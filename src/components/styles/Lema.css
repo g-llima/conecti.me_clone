@@ -12,6 +12,26 @@
   padding: 1rem;
   position: relative;
 }
+.lema__content__imgs {
+  position: relative;
+  max-width: 600px;
+  min-width: 300px;
+}
+.lema__content__imgs__bgImg {
+  width: 100%;
+}
+.lema__content__imgs__objects {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.lema__content__imgs__objects__img {
+  position: absolute;
+  border: 5px solid white;
+  border-radius: 50%;
+}
 .lema__content__texts {
   margin: 0 5rem;
   max-width: 400px;
@@ -27,60 +47,6 @@
 .lema__content__texts__desc {
   font-size: 15px;
   color: #8d8d8d;
-}
-.lema__content__imgs {
-  position: relative;
-  max-width: 600px;
-  min-width: 300px;
-}
-.lema__content__imgs__bgImg {
-  width: 100%;
-}
-.lema__content__imgs__objects {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  left: 0;
-  top: 0;
-}
-.lema__content__imgs__objects__img {
-  position: absolute;
-  border: 5px solid white;
-  border-radius: 50%;
-}
-.imgL1 {
-  width: 22%;
-}
-.imgL2 {
-  width: 18%;
-  left: 55%;
-  top: 12%;
-}
-.imgL3 {
-  width: 12%;
-  left: 88%;
-  top: 20%;
-}
-.imgL4 {
-  width: 12%;
-  left: 50%;
-  top: 53%;
-}
-.imgL5 {
-  width: 20%;
-  left: 75%;
-  top: 65%;
-}
-.imgL6 {
-  width: 17%;
-  left: 15%;
-  top: 50%;
-}
-.imgL7 {
-  width: 10%;
-  left: 15%;
-  top: 83%;
 }
 .lema__circle {
   width: 21%;
