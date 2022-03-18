@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "./styles/Contato.css";
 import ReactMapGL from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import mapboxgl from "mapbox-gl";
+
+mapboxgl.workerClass =
+  // eslint-disable-next-line import/no-webpack-loader-syntax
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const mapboxAPI = process.env.REACT_APP_MAPAPI;
 

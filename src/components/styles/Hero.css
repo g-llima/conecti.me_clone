@@ -19,14 +19,15 @@
   align-items: center;
   justify-content: center;
   margin-right: 15vw;
-  z-index: 99;
 }
 .hero__texts__title {
   font-size: calc(60px + 2vw);
   line-height: 120px;
+  position: relative;
   width: 500px;
   font-weight: bolder;
   color: #222;
+  z-index: 99;
 }
 .Typewriter__wrapper,
 .Typewriter__cursor {
